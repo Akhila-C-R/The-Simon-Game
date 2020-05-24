@@ -23,7 +23,6 @@ function nextSequence()
     userClickedPattern.length=0;
     
     level++;
-    console.log("level: "+level);
     $("#level-title").text("Level "+level);
 
     var num = Math.random();
