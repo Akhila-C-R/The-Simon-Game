@@ -1,0 +1,126 @@
+body 
+{
+    text-align: center;
+    background-color: #011F3F;
+    color: #FEF2BF;
+}
+#level-title
+{
+    font-family: 'Press Start 2P', cursive;
+    font-size: 2.1rem;
+    margin: 2%;
+    line-height: 1.5;
+}
+
+.btn 
+{
+    margin: 20px;
+    display: inline-block;
+    height: 180px;
+    width: 180px;
+    border: 10px solid black;
+    border-radius: 20%;
+}
+.green
+{
+    background-color: green;
+}
+.red
+{
+    background-color: red;
+}
+.yellow
+{
+    background-color: yellow;
+}
+.blue
+{
+    background-color: blue;
+}
+.game-over
+{
+    background-color: red;
+    opacity: 1;
+}
+.pressed
+{
+    box-shadow: 0 0 20px white;
+    background-color: grey;
+}
+
+#help,.close
+{
+    color:#FEF2BF;
+    background-color: #011F3F;
+    font-family: 'Press Start 2P', cursive;
+}
+#help
+{
+    position: absolute;
+    top:20%;
+    right: 100px;
+    height: 40px;
+    width:150px;
+
+    font-size: 10px;
+    border: 1.5px solid #FEF2BF;
+}
+.popup-overlay
+{
+    display: none;
+    position: absolute;
+    top:30%;
+    right:2%;
+    height: 100px;
+    width:300px;
+
+    font-family: 'Open Sans', sans-serif;
+    border: 1px solid #FEF2BF;
+    border-radius: 20px;
+    font-size: 0.9rem;
+}
+
+.popup-content
+{
+    padding: 4%;
+}
+.close 
+{
+    position: relative;
+    top:20px;
+    display: inline-block;
+    width:80px;
+    height: 25px;
+
+    font-size: 8px;
+    border-radius: 20px;
+    border: 1px solid #FEF2BF;
+}
+
+@media (max-width: 600px)
+{
+    #level-title
+    {
+        font-size: 1.5rem;
+        margin: 6%;
+    }
+    .btn 
+    {
+        margin: 15px;
+        display: inline-block;
+        height: 140px;
+        width: 140px;
+        border: 10px solid black;
+        border-radius: 20%;
+    }
+    #help
+    {
+        top:70%;
+        right: 130px;
+    }
+    .popup-overlay
+    {
+        top:78%;
+        right:14%;
+    }
+}
