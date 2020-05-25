@@ -5,7 +5,13 @@ var gamePattern=[];
 var userClickedPattern=[];
 
 $(document).on("keydown",function(){
-    
+   gameStart();
+});
+
+document.addEventListener("touchstart", gameStart);
+
+function gameStart()
+{
     if(started==false)
     {
         started=true;
@@ -16,7 +22,7 @@ $(document).on("keydown",function(){
             gameHandler(this);
         });
     } 
-});
+}
 
 function nextSequence()
 {
@@ -58,15 +64,15 @@ function checkAnswer(currentLevel)
         }
    }
    else
-   { 
+   {
         playSound("wrong");
-        
+
         $("#"+userClickedPattern[currentLevel]).addClass("game-over");
         setTimeout(function() { $("#"+userClickedPattern[currentLevel]).removeClass("game-over"); }, 200);
         $("#level-title").text("Game Over, Press Any Key to Restart");
         $(".btn").off("click");
-
         startOver();
+
    }
 }
 function startOver()
@@ -94,4 +100,10 @@ $("#help").on("click", function() {
 
 $(".close").on("click", function() {
     $(".popup-overlay").slideUp();
+});
+
+$(document).ready(function(){
+    $(document).focus(function(){
+        console.log("inside focus!");
+    });
 });

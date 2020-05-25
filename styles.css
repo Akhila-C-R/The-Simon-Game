@@ -101,7 +101,7 @@ body
 {
     #level-title
     {
-        font-size: 1.5rem;
+        font-size: 1rem;
         margin: 6%;
     }
     .btn 
@@ -115,15 +115,15 @@ body
     }
     #help
     {
-        top:70%;
+        top:68%;
         right: 100px;
     }
     .popup-overlay
     {
-        top: 80%;
-        right: 10%;
-        height: 50px;
-        width: 280px;
+        top: 76%;
+        right: 8%;
+        height: 70px;
+        width: 300px;
     }
     .popup-overlay p
     {
@@ -132,5 +132,10 @@ body
     .popup-content
     {
         padding: 0;
+    }
+
+    .close
+    {
+        visibility: hidden;
     }
 }
