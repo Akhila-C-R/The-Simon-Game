@@ -30,7 +30,6 @@ function nextSequence()
 
     var randomChosenColour = buttonColours[num];
     gamePattern.push(randomChosenColour);
-    console.log("game pattern: "+gamePattern);
 
     $("#"+randomChosenColour).fadeOut(70).fadeIn(70);
     playSound(randomChosenColour); 
@@ -53,8 +52,6 @@ function checkAnswer(currentLevel)
    {
         if(gamePattern.length==userClickedPattern.length)
         {
-            console.log("user clicked pattern: "+userClickedPattern);
-            console.log("Success!");
             setTimeout(function() { 
                 nextSequence();
             }, 1000);
@@ -62,16 +59,14 @@ function checkAnswer(currentLevel)
    }
    else
    { 
-        console.log("Wrong");
-        console.log("user clicked pattern: "+userClickedPattern);
         playSound("wrong");
-
+        
         $("#"+userClickedPattern[currentLevel]).addClass("game-over");
         setTimeout(function() { $("#"+userClickedPattern[currentLevel]).removeClass("game-over"); }, 200);
         $("#level-title").text("Game Over, Press Any Key to Restart");
         $(".btn").off("click");
-        startOver();
 
+        startOver();
    }
 }
 function startOver()
