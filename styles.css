@@ -97,7 +97,7 @@ body
     border: 1px solid #FEF2BF;
 }
 
-@media (max-width: 600px)
+@media (max-width: 1000px)
 {
     #level-title
     {
@@ -106,21 +106,31 @@ body
     }
     .btn 
     {
-        margin: 15px;
+        margin: 10px;
         display: inline-block;
-        height: 140px;
-        width: 140px;
-        border: 10px solid black;
+        height: 100px;
+        width: 100px;
+        border: 8px solid black;
         border-radius: 20%;
     }
     #help
     {
         top:70%;
-        right: 130px;
+        right: 100px;
     }
     .popup-overlay
     {
-        top:78%;
-        right:14%;
+        top: 80%;
+        right: 10%;
+        height: 50px;
+        width: 280px;
+    }
+    .popup-overlay p
+    {
+        margin: 5px;
+    }
+    .popup-content
+    {
+        padding: 0;
     }
 }
