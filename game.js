@@ -8,7 +8,9 @@ $(document).on("keydown",function(){
    gameStart();
 });
 
-document.addEventListener("touchstart", gameStart);
+document.addEventListener("touchstart", function(){
+    setTimeout(function() { gameStart(); }, 700);
+});
 
 function gameStart()
 {
