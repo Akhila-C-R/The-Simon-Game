@@ -14,7 +14,7 @@ body
 }
 .btn 
 {
-    margin: 20px;
+    margin: 15px;
     display: inline-block;
     height: 180px;
     width: 180px;
@@ -125,7 +125,7 @@ footer
     }
     .btn 
     {
-        margin: 10px;
+        margin: 3px;
         display: inline-block;
         height: 100px;
         width: 100px;
@@ -174,7 +174,7 @@ footer
     footer
     {
         position: relative;
-        top:180px;
+        top:150px;
         font-size: 0.7rem;
         font-family: 'Open Sans', sans-serif;
     }
