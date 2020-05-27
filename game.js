@@ -4,12 +4,23 @@ var buttonColours=["red","blue","green","yellow"];
 var gamePattern=[];
 var userClickedPattern=[];
 
+var isMobile = /iPhone|iPad|iPod|Android/i.test(navigator.userAgent);
+
+if(isMobile)
+{
+    $("#level-title").text("The Simon Game");
+}
+else
+{
+    $("#level-title").text("Press Any Key To Start");
+}
+
 $(document).on("keydown",function(){
    gameStart();
 });
 
-document.addEventListener("touchstart", function(){
-    setTimeout(function() { gameStart(); }, 700);
+document.querySelector("#play").addEventListener("click", function(){
+    gameStart();
 });
 
 function gameStart()
@@ -19,7 +30,6 @@ function gameStart()
         started=true;
         $("#level-title").text("Level "+level);
         nextSequence();
-    
         $(".btn").on("click",function(){
             gameHandler(this);
         });
@@ -71,10 +81,17 @@ function checkAnswer(currentLevel)
 
         $("#"+userClickedPattern[currentLevel]).addClass("game-over");
         setTimeout(function() { $("#"+userClickedPattern[currentLevel]).removeClass("game-over"); }, 200);
-        $("#level-title").text("Game Over, Press Any Key to Restart");
+
+        if(isMobile)
+        {
+            $("#level-title").text("Game Over, Press Play to Restart");
+        }
+        else
+        {
+            $("#level-title").text("Game Over, Press Any Key to Restart");
+        }
         $(".btn").off("click");
         startOver();
-
    }
 }
 function startOver()
@@ -102,10 +119,4 @@ $("#help").on("click", function() {
 
 $(".close").on("click", function() {
     $(".popup-overlay").slideUp();
-});
-
-$(document).ready(function(){
-    $(document).focus(function(){
-        console.log("inside focus!");
-    });
 });
